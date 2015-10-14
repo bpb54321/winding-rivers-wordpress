@@ -54,18 +54,10 @@
     color: black;    
 }   
 
-/*.current-menu-item > a, .current-menu-item > a:hover {
-    background-color: #E5E5E5;   
-}*/
-
 .current-menu-item {
     background-color: #E5E5E5;   
 }
 
-/*.current-menu-parent .current-menu-item a {
-    color: #fff;
-    font-weight: bold;
-}*/
 /*-------------------------*/
 
 
