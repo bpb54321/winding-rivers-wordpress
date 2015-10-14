@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{title}}</title> 
+        <title><?php the_title(); ?></title> 
 
         <?php wp_head(); ?>
 
@@ -21,18 +21,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">WINDING RIVERS</a>
+                <!--<a class="navbar-brand" href="#">WINDING RIVERS</a>-->
+                <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a>
             </div>
             <div class="collapse navbar-collapse" id="menu-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li>
-                        <a href="about.html" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-                    </li>
-                    <li><a href="properties.html">Development</a></li>
-                    <li><a href="financial_model.html">Financial Model</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+
+                <?php 
+                    $args = array(
+                        'menu'          =>  'header_menu',
+                        'menu_class'    =>  'nav navbar-nav',
+                        'container'     =>  'false'
+                    );
+
+                    wp_nav_menu( $args );
+
+                ?>
+                
                 <form class="navbar-form navbar-right" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="PEXH3B2NKBGX6">

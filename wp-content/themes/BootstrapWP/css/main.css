@@ -5,18 +5,68 @@
     background-color: white;
 }
 .nav a {
-    color: #5a5a5a;
+    /*color: #5a5a5a; just use Bootstrap default color*/ 
     font-weight: bold;
     padding: 14px 10px;
     text-transform: uppercase;
     font-size: 1.0em;
 }
-.dropdown-menu>li>a {
+/*.dropdown-menu>li>a {
     font-weight: bold;
-}
+}*/
 .navbar-form {
     margin: 0px;
 }
+
+/*---If screen bigger than breakpoint---*/
+@media (min-width:768px) {
+    .sub-menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 10px 15px;
+        width: 250px;     
+    }
+
+    /*Show sub-menu on hover*/
+    li:hover .sub-menu {
+        display: block; 
+    }
+
+}
+/*------------------------------------*/
+
+.sub-menu li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.sub-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.sub-menu a  {
+    color: #777;
+    text-decoration: none;
+}
+
+.sub-menu a:hover  {
+    color: black;    
+}   
+
+/*.current-menu-item > a, .current-menu-item > a:hover {
+    background-color: #E5E5E5;   
+}*/
+
+.current-menu-item {
+    background-color: #E5E5E5;   
+}
+
+/*.current-menu-parent .current-menu-item a {
+    color: #fff;
+    font-weight: bold;
+}*/
+/*-------------------------*/
 
 
 /*Jumbotron CSS*/

@@ -3,7 +3,7 @@
 
     <div class="jumbotron" style="background-image: url(img/{{jumbotron_image}})">
       <div class="container" >
-        <h1>{{jumbotron_h1}}</h1>
+        <h1><?php the_title(); ?></h1>
         <p>{{jumbotron_p}}</p>
       </div>
     </div>
