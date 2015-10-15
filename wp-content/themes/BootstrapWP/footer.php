@@ -1,7 +1,7 @@
         <hr>
 
         <footer>
-            <p>&copy; Winding Rivers Cooperative Community 2015</p>
+            <p>&copy; <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </p>
         </footer>
     </div>
 
