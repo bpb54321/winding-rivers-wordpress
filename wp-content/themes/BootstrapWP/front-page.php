@@ -1,7 +1,9 @@
 
     <?php get_header(); ?>
 
-    <div class="jumbotron" style="background-image:">
+    <?php $image_string = get_template_directory_uri() . '/img/index_jumbotron.jpg'; ?> 
+
+    <div class="jumbotron" style="background-image: url(' <?php echo $image_string; ?> ');">
       <div class="container" >
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
