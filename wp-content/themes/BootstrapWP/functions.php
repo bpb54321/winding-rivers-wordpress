@@ -8,6 +8,10 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 function theme_js() {
 
+	//Add Google analytics to header
+	wp_enqueue_script('google-analytics', get_template_directory_uri() . '/js/google-analytics.js', '', '', false ); //false means loaded in header, not footer
+
+
 	//Conditionally add these scripts if before IE 9
 	global $wp_scripts;
 
@@ -18,7 +22,10 @@ function theme_js() {
 	$wp_scripts->add_data('html5_shiv', 'conditional', 'lt IE 9' );
 	$wp_scripts->add_data('respond_js', 'conditional', 'lt IE 9' );
 
+	//Regular scripts
 	wp_enqueue_script('bootstrap_min_js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
+	wp_enqueue_script('jquery_ui', "//code.jquery.com/ui/1.11.4/jquery-ui.js", array('jquery'),'1.11.4', true);
+	wp_enqueue_script('load-accordion',get_template_directory_uri() . '/js/load-accordion.js', array('jquery', 'jquery_ui'),'',true );
 
 }
 add_action('wp_enqueue_scripts', 'theme_js');

@@ -1,4 +1,4 @@
 var main = function() {
-	$("#accordion").accordion();		
+	jQuery("#accordion").accordion();		
 };
-$(document).ready(main);
+jQuery(document).ready(main);
