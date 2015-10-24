@@ -97,6 +97,20 @@
     font-size: 1.2em;
 }
 
+/*-------Properties Page--------*/
+.cycle-slideshow {
+    width: 100%; 
+    height: 400px;
+}
+.cycle-slideshow img {
+    width: 100%; 
+    height: 100%;
+} 
+.google-map {
+    width: 100%; 
+    height: 400px;
+}
+
 
 
 
