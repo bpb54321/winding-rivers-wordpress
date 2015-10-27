@@ -23,7 +23,8 @@
 }
 
 /*---If screen bigger than breakpoint---*/
-@media (min-width:768px) { 
+/*---Need this to be the same as Bootstrap breakpoint--*/
+@media (min-width:970px) { 
     .sub-menu {
         display: none;
         position: absolute;
@@ -107,7 +108,7 @@
     height: 100%;
 } 
 .google-map {
-    width: 100%; 
+    width: 90%; 
     height: 400px;
 }
 
