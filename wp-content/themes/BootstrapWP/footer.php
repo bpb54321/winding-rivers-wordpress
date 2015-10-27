@@ -1,7 +1,18 @@
         <hr>
 
         <footer>
-            <p>&copy; <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </p>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/StLouisEcovillageNetwork" target="_blank">
+                            <i class="fi-social-facebook pull-right"></i>   
+                        </a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
