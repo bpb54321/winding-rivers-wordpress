@@ -9,7 +9,7 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 function theme_js() {
 
-	//Add Google analytics to header
+	//Add basic Google analytics script to header
 	wp_enqueue_script('google-analytics', get_template_directory_uri() . '/js/google-analytics.js', '', '', false ); //false means loaded in header, not footer
 
 
@@ -29,6 +29,9 @@ function theme_js() {
 	wp_enqueue_script('jquery_ui', "//code.jquery.com/ui/1.11.4/jquery-ui.js", array('jquery'),'1.11.4', true);
 	wp_enqueue_script('load-accordion',get_template_directory_uri() . '/js/load-accordion.js', array('jquery', 'jquery_ui'),'',true );
 	wp_enqueue_script('cycle2', get_template_directory_uri() . '/js/jquery.cycle2.js', array('jquery'), '', true );
+
+	//Google analytics event tracking
+	wp_enqueue_script('event-tracker', get_template_directory_uri() . '/js/event-tracker.js', array('jquery'), '', true );
 
 }
 add_action('wp_enqueue_scripts', 'theme_js');

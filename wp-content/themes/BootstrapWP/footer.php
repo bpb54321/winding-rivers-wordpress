@@ -7,7 +7,7 @@
                         <p>&copy; <?php bloginfo( 'name' );?> <?php echo date('Y'); ?> </p>
                     </div>
                     <div>
-                        <a href="https://www.facebook.com/StLouisEcovillageNetwork" target="_blank">
+                        <a id="facebook-button" href="https://www.facebook.com/StLouisEcovillageNetwork" target="_blank">
                             <i class="fi-social-facebook pull-right"></i>   
                         </a>
                     </div>
