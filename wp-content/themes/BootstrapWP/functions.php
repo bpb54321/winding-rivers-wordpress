@@ -48,5 +48,46 @@ function register_theme_menus() {
 }
 add_action( 'init', 'register_theme_menus' );
 
+/*-----------Registering Custom Widget Areas---------------------- */
+//Front Page Left
+$args = array(
+	'name'          => 'Front Page Left',
+	'id'            => 'front-page-left',
+	'description'   => 'Area on the bottom-left of the front page.',
+	'class'         => '',
+	'before_widget' => '',
+	'after_widget'  => '',
+	'before_title'  => '<h2 style="text-align: center;">',
+	'after_title'   => '</h2>',
+);
+register_sidebar($args);
+
+//Front Page Middle
+$args = array(
+	'name'          => 'Front Page Middle',
+	'id'            => 'front-page-middle',
+	'description'   => 'Area on the bottom-middle of the front page.',
+	'class'         => '',
+	'before_widget' => '',
+	'after_widget'  => '',
+	'before_title'  => '<h2 style="text-align: center;">',
+	'after_title'   => '</h2>',
+);
+register_sidebar($args);
+
+//Front Page Right
+$args = array(
+	'name'          => 'Front Page Right',
+	'id'            => 'front-page-right',
+	'description'   => 'Area on the bottom-right of the front page.',
+	'class'         => '',
+	'before_widget' => '',
+	'after_widget'  => '',
+	'before_title'  => '<h2 style="text-align: center;">',
+	'after_title'   => '</h2>',
+);
+register_sidebar($args);
+
+
 
 ?>
