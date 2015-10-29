@@ -9,10 +9,6 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 function theme_js() {
 
-	//Add basic Google analytics script to header
-	wp_enqueue_script('google-analytics', get_template_directory_uri() . '/js/google-analytics.js', '', '', false ); //false means loaded in header, not footer
-
-
 	//Conditionally add these scripts if before IE 9
 	global $wp_scripts;
 
